@@ -7,7 +7,6 @@
     "devDependencies": {
         "@icon-park/svg": "^1.0.0",
         "humps": "^2.0.1",
-        "mkdirp": "^1.0.4",
-        "iconpark": "git+git@github.com:bytedance/IconPark.git"
+        "mkdirp": "^1.0.4"
     }
 }

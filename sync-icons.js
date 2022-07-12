@@ -9,7 +9,7 @@ import * as fs from "fs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const require = createRequire(import.meta.url);
-const icons = require("iconpark/source/icons.json")
+const icons = require("@icon-park/svg/icons.json")
 
 const outline = {theme: 'outline', size: '24'}
 const filled = {theme: 'filled', size: '24'}
