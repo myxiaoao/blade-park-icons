@@ -1,33 +1,35 @@
-import {createRequire} from "module";
-import humps from 'humps';
-import p, {dirname} from 'path';
-import * as svg from "@icon-park/svg";
-import {fileURLToPath} from 'url';
-import mkdirp from 'mkdirp';
 import * as fs from "fs";
+import * as svg from "@icon-park/svg";
+import humps from 'humps';
+import mkdirp from 'mkdirp';
+import p, {dirname} from 'path';
+import {createRequire} from "module";
+import {fileURLToPath} from 'url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const require = createRequire(import.meta.url);
-const icons = require("@icon-park/svg/icons.json")
-
-const outline = {theme: 'outline', size: '24'}
-const filled = {theme: 'filled', size: '24'}
-const two_tone = {theme: 'two-tone', size: '24'}
-const multi_color = {theme: 'multi-color', size: '24'}
+const icons = require("@icon-park/svg/icons.json");
+const style = {
+    outline: {theme: 'outline', size: '24'},
+    filled: {theme: 'filled', size: '24'},
+    two_tone: {theme: 'two-tone', size: '24'},
+    multi_color: {theme: 'multi-color', size: '24'}
+};
 
 icons.forEach(item => {
     const file_name = item.name
     const sf = humps.pascalize(file_name);
     // outline
-    generation(sf, outline, file_name + '.svg')
+    generation(sf, style.outline, file_name + '.svg');
     // filled
-    generation(sf, filled, file_name + '-filled.svg')
+    generation(sf, style.filled, file_name + '-filled.svg');
     // two-tone
-    generation(sf, two_tone, file_name + '-two-tone.svg')
+    generation(sf, style.two_tone, file_name + '-two-tone.svg');
     // multi-color
-    generation(sf, multi_color, file_name + '-multi-color.svg')
+    generation(sf, style.multi_color, file_name + '-multi-color.svg');
 });
+
+console.log('sync icons done.');
 
 function generation(func, config, file_name) {
     const content = svg[func](config);
