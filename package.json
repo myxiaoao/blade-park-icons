@@ -1,0 +1,12 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix"
+    },
+    "devDependencies": {
+        "iconpark": "git+git@github.com:bytedance/IconPark.git",
+        "cross-env": "^7.0.3",
+        "laravel-mix": "^6.0.43"
+    }
+}
