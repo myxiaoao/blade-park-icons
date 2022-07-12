@@ -45,6 +45,21 @@ And even use inline styles:
 <x-park-apple style="color: #666"/>
 ```
 
+To use filled version append `-filled`
+```blade
+<x-park-apple-filled/>
+```
+
+To use two-tone version append `-two-tone`
+```blade
+<x-park-apple-two-tone/>
+```
+
+To use multi-color version append `-multi-color`
+```blade
+<x-park-apple-multi-color/>
+```
+
 ### Raw SVG Icons
 
 If you want to use the raw SVG icons as assets, you can publish them using:
@@ -61,7 +76,7 @@ Then use them in your views like:
 
 ### Blade Icons
 
-Blade Bootstrap Icons uses Blade Icons under the hood. Please refer to [the Blade Icons readme](https://github.com/blade-ui-kit/blade-icons) for additional functionality.
+Blade IconPark Icons uses Blade Icons under the hood. Please refer to [the Blade Icons readme](https://github.com/blade-ui-kit/blade-icons) for additional functionality.
 
 ## Maintainers
 
@@ -71,4 +86,4 @@ Blade Icons is developed and maintained by [Dries Vints](https://driesvints.com/
 
 ## License
 
-Blade Bootstrap Icons is open-sourced software licensed under [the MIT license](LICENSE.md).
+Blade IconPark Icons is open-sourced software licensed under [the MIT license](LICENSE.md).

@@ -1,12 +1,13 @@
 {
     "private": true,
+    "type": "module",
     "scripts": {
-        "dev": "npm run development",
-        "development": "mix"
+        "dev": "node sync-icons.js"
     },
     "devDependencies": {
-        "iconpark": "git+git@github.com:bytedance/IconPark.git",
-        "cross-env": "^7.0.3",
-        "laravel-mix": "^6.0.43"
+        "@icon-park/svg": "^1.0.0",
+        "humps": "^2.0.1",
+        "mkdirp": "^1.0.4",
+        "iconpark": "git+git@github.com:bytedance/IconPark.git"
     }
 }
